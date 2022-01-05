@@ -6,7 +6,7 @@ Machine learning algorithms are on the rise. With the rapid development of new t
 In recent years, MLOps has become a hot topic which focus on increasing automation. [Amazon SageMaker Pipelines](https://aws.amazon.com/sagemaker/pipelines/) is the first purpose-built, easy-to-use continuous integration and continuous delivery (CI/CD) service for machine learning (ML). In this example, we demonstrate how to integrate SageMaker Pipelines with BYOC solutions to bring the state-of-the-art algorithm to help in the creation and automation of end-to-end ML workflow more efficiently.
 
 ## Prerequisites
-- Amazon SageMaker notebook instance of `ml.t3.medium` with 100GB EFS, as well as a role with policies of `AmazonSageMakerFullAccess`
+- Amazon SageMaker notebook instance of `ml.t3.medium` with 50GB EBS, as well as a role with policies of `AmazonSageMakerFullAccess`
 - Account limit:
     - 1 x `ml.p3.16xlarge` instance for Training Job
     - 1 x `ml.p3.2xlarge` instance for batch inference
@@ -29,6 +29,30 @@ In this repository, we use the dataset of [IMDB](https://ai.stanford.edu/~amaas/
 ```bash
 wget https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz -O aclImdb_v1.tar.gz
 ```
+
+
+
+## Running Costs
+
+Total cost is estimated to be about $33 with the default parameters.
+
+- Feature ingestion, ml.m5.xlarge, $0.23/h, less than 1h
+
+- Create data, ml.m5.xlarge, $0.23/h, less than 1h
+
+- Training job, ml.p3.16xlarge, $28.152/h, less than 1h
+
+- Test scoring, ml.p3.2xlarge, $3.825/h, less than 1h
+
+- Model quality, ml.m5.xlarge, $3.825/h, less than 1h
+
+- Real-time Inference endpoint, ml.m5.large, $0.115/h, less than 1h
+- Asychronous inference endpoint, ml.m5.large, $0.115/h, less than 1h
+- SageMaker notebook instance, ml.t3.medium, $0.05/h, about 2h
+
+
+
+
 
 ## Security
 
