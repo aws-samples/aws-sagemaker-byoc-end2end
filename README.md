@@ -1,14 +1,17 @@
 # End to End Pipeline: Bring your own container to SageMaker Pipelines
 
 ## Background
-As machine learning algorithms update frequently, the built-in algorithms in SageMaker is hard to keep start-of-the-art. In order to use the latest machine learning algorithm with SageMaker, BYOC(Bring Your Own Container) will be an alternative. [Amazon SageMaker Pipelines](https://aws.amazon.com/sagemaker/pipelines/) is the first purpose-built, easy-to-use continuous integration and continuous delivery (CI/CD) service for machine learning (ML). SageMaker Pipelines with BYOC can bring the state-of-the-art algorithm to the production environment more effectively.
+Machine learning algorithms are on the rise. With the rapid development of new techniques, we often found new algorithms outdate the current leading algorithms or the popular framework version frequently updating. Making the state-of-the-art algorithms available as built-in algorithms or keeping the prebuilt deep learning framework containers with the latest version can be challenging. In order to use the latest machine learning algorithms with SageMaker, you can Bring Your Own Container (BYOC) to SageMaker or extend a prebuilt SageMaker algorithm or model Docker image to satisfy your needs. For more information about Docker containers with SageMaker, please refer to the [document](https://docs.aws.amazon.com/sagemaker/latest/dg/docker-containers.html). 
+
+In recent years, MLOps has become a hot topic which focus on increasing automation. [Amazon SageMaker Pipelines](https://aws.amazon.com/sagemaker/pipelines/) is the first purpose-built, easy-to-use continuous integration and continuous delivery (CI/CD) service for machine learning (ML). In this example, we demonstrate how to integrate SageMaker Pipelines with BYOC solutions to bring the state-of-the-art algorithm to helpt in the creation and automation of end-to-end ML workflow more efficiently.
 
 ## Prerequisites
 - Amazon SageMaker notebook instance of `ml.t3.medium` with 100GB EFS, as well as a role with policies of `AmazonSageMakerFullAccess`
-- at latest one `ml.p3.16xlarge` instance limit for Training Job
-- one `ml.p3.2xlarge` instance for batch inference
-- one `ml.m5.xlarge` instance for processing jobs
-- the region `us-east-1` is recommended
+- Account limit:
+    - 1 x `ml.p3.16xlarge` instance for Training Job
+    - 1 x `ml.p3.2xlarge` instance for batch inference
+    - 1 x `ml.m5.xlarge` instance for processing jobs
+- `us-east-1` is the recommended region to run the example
 
 ## Objective
 This repository demonstrates how to create an end2end pipeline at BYOC mode with SageMaker Pipelines. it consists of the following parts:
