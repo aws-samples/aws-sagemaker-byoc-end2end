@@ -3,7 +3,7 @@
 ## Background
 Machine learning algorithms are on the rise. With the rapid development of new techniques, we often found new algorithms outdate the current leading algorithms or the popular framework version frequently updating. Making the state-of-the-art algorithms available as built-in algorithms or keeping the prebuilt deep learning framework containers with the latest version can be challenging. In order to use the latest machine learning algorithms with SageMaker, you can Bring Your Own Container (BYOC) to SageMaker or extend a prebuilt SageMaker algorithm or model Docker image to satisfy your needs. For more information about Docker containers with SageMaker, please refer to the [document](https://docs.aws.amazon.com/sagemaker/latest/dg/docker-containers.html). 
 
-In recent years, MLOps has become a hot topic which focus on increasing automation. [Amazon SageMaker Pipelines](https://aws.amazon.com/sagemaker/pipelines/) is the first purpose-built, easy-to-use continuous integration and continuous delivery (CI/CD) service for machine learning (ML). In this example, we demonstrate how to integrate SageMaker Pipelines with BYOC solutions to bring the state-of-the-art algorithm to help in the creation and automation of end-to-end ML workflow more efficiently.
+In recent years, MLOps has become a hot topic which focus on increasing automation. [Amazon SageMaker Pipelines](https://aws.amazon.com/sagemaker/pipelines/) is the first purpose-built, easy-to-use continuous integration and continuous delivery (CI/CD) service for machine learning (ML). In this example, through the task of text classification, we demonstrate how to integrate SageMaker Pipelines with BYOC solutions to bring the state-of-the-art algorithm to help in the creation and automation of end-to-end ML workflow more efficiently.
 
 ## Prerequisites
 - Amazon SageMaker notebook instance of `ml.t3.medium` with 50GB EBS, as well as a role with policies of `AmazonSageMakerFullAccess`
@@ -34,13 +34,13 @@ wget https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz -O aclImdb_
 
 ## Running Costs
 
-Total cost is estimated to be about $33 with the default parameters.
+Total cost is estimated to be about $33 with the default parameters. Further cost breakdowns are below.
 
 - Feature ingestion, ml.m5.xlarge, $0.23/h, less than 1h
 
 - Create data, ml.m5.xlarge, $0.23/h, less than 1h
 
-- Training job, ml.p3.16xlarge, $28.152/h, less than 1h
+- Training model, ml.p3.16xlarge, $28.152/h, less than 1h
 
 - Test scoring, ml.p3.2xlarge, $3.825/h, less than 1h
 
