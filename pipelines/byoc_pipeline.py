@@ -425,7 +425,7 @@ def model_quality_baseline(
     model_quality_analyzer = ModelQualityMonitor(
         role=role,
         instance_count=instance_count,
-        instance_type=instance_type,
+        instance_type="ml.m5.xlarge",
         base_job_name=f"{prefix}/monitoring",
         sagemaker_session=sagemaker_session,
         max_runtime_in_seconds=1800,
