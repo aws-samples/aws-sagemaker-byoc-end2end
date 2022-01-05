@@ -1,7 +1,7 @@
 # End to End Pipeline: Bring your own container to SageMaker Pipelines
 
 ## Background
-In machine learning field, algorithm updates frequently, the built-in algorithms in SageMaker is hard to keep up with those latest algorithms timely. In that case, BYOC(Bring Your Own Container) is an alternative. [Amazon SageMaker Pipelines](https://aws.amazon.com/sagemaker/pipelines/) is the first purpose-built, easy-to-use continuous integration and continuous delivery (CI/CD) service for machine learning (ML). SageMaker Pipelines with BYOC can bring the state-of-the-art algorithms to the production environment effectively.
+As machine learning algorithms update frequently, the built-in algorithms in SageMaker is hard to keep start-of-the-art. In order to use the latest machine learning algorithm with SageMaker, BYOC(Bring Your Own Container) will be an alternative. [Amazon SageMaker Pipelines](https://aws.amazon.com/sagemaker/pipelines/) is the first purpose-built, easy-to-use continuous integration and continuous delivery (CI/CD) service for machine learning (ML). SageMaker Pipelines with BYOC can bring the state-of-the-art algorithm to the production environment more effectively.
 
 ## Prerequisites
 - Amazon SageMaker notebook instance of `ml.t3.medium` with 100GB EFS, as well as a role with policies of `AmazonSageMakerFullAccess`
@@ -11,7 +11,7 @@ In machine learning field, algorithm updates frequently, the built-in algorithms
 - the region `us-east-1` is recommended
 
 ## Objective
-This repository demonstrates how to create an end2end pipeline at BYOC mode with SageMaker Pipelines. it consits of the following parts:
+This repository demonstrates how to create an end2end pipeline at BYOC mode with SageMaker Pipelines. it consists of the following parts:
 - Feature ingestion
 - Model building
 - Real-time inference endpoint deployment
