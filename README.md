@@ -13,6 +13,9 @@ In recent years, MLOps has become a hot topic which focus on increasing automati
     - 1 x `ml.m5.xlarge` instance for processing jobs
 - `us-east-1` is the recommended region to run the example
 
+## Requirements
+- sagemaker 2.72.1 or later
+
 ## Objective
 This repository demonstrates how to create an end2end pipeline at BYOC mode with SageMaker Pipelines. it consists of the following parts:
 - Feature ingestion
